@@ -109,6 +109,110 @@ mount <linux file partition path> /mnt
 ```
 mkdir -p /mnt/boot/efi
 mount <EFI partition path> /mnt/boot/efi
+```
 
-# Section Seven
+# Section Seven - Install Arch Linux System And Necessary Software
+1. Install command
+   - linux: kernel
+   - linux-firmware: firmware
+   - linux-headers: some common headers will need
+   - base: base packages
+   - base-devel: packages for developer, include gcc, g++, make, cmake, etc.
+```
+pacstrap /mnt linux linux-firmware linux-headers base base-devel
+```
+
+# Section Eight - Generate EFI Table
+1. Generate command
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+ps: It is highly recommand to cat the file and check the correctness. It should include and only include the name of your partition and their detail information
+
+# Section Nine - Step Into Installed Arch
+1. Command
+```
+arch-chroot /mnt
+```
+
+# Section Ten - Set Time Zone
+1. Command
+```
+ln -sf /usr/share/zoneinfo/<Region>/<City> /etc/localtime
+```
+2. Generate /etc/adjtime
+```
+hwclock --systohc
+```
+ps: For Chinese user, the Region is going to be Asia, and City is going to be Shanghai
+
+# Section Eleven - Localization
+1. Uncomment the locale you want in the file /etc/locale.gen
+2. Generate locale infomation
+```
+locale-gen
+```
+3. Create file /etc/locale.conf, and set variable LANG to the locale you just uncomment. (Example: LANG=en_US.UTF-8)
+ps: For most of user, you should uncomment en_US.UTF-8 UTF-8. For Chinese user, a better way is to uncomment en_GB.UTF-8 or en_SG.UTF-8 in order to have 24 hours, US standered measurement unit. It is not recommand to set locale as Chinese, since it could result in tty display wrong code.
+
+# Section Twelve - Set Up Network Config
+1. Set up host name
+```
+vim /etc/hostname
+```
+2. Add the following to the file /etc/hosts
+```
+127.0.0.1        localhost
+::1              localhost
+127.0.1.1        <host name>.localdomain        <host name>
+```
+
+# Section Thirteen - User Setting
+1. Set root password
+```
+passwd
+```
+2. Create new user for daily use, and set the password for it
+```
+useradd -m <new user name>
+passwd <new user name>
+```
+3. Give new user necessary permission by adding it to some groups
+```
+usermod -aG wheel,audio,video,optical,storage <user name>
+```
+
+# Section Thirteen - Install And Config Necessary Packages
+1. Following packages are recommanded
+   - grub, efibootmgr, efivar (about boot)
+   - networkmanager (about network)
+   - amd-ucode (or intel-ucode, depends on which cpu you use)
+   - sudo (allow wheel group user has root permission)
+```
+pacman -S grub efibootmgr efivar networkmanager amd-ucode sudo
+```
+2. Install grub
+```
+grub-install <path to the disk>
+```
+3. Change the window resolution in file /etc/default/grub
+4. Make grub config
+```
+grub-mkconfig /boot/grub/grub.cfg
+```
+5. Enable networkmanager daemon
+```
+systemctl enbale NetworkManager
+```
+6. Config sudo, uncomment the line "%wheel ALL=(ALL) ALL" (might be slight different)
+```
+EDITOR=nvim visudo
+```
+
+# Section Fourteen - Finish The Basic Install
+1. Exit and umount the partition.
+```
+exit
+umount /mnt/boot/efi
+umount /mnt
 ```
