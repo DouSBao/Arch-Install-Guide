@@ -26,7 +26,7 @@ iwctl
 ```
 device list
 ```
-6. Use the following first command to show the status of your network card.
+6. Use the first command to show the status of your network card.
    - If the status of "Powered" is off, then use second and the third command on turn it on.
    - If still not working, try **rfkill unblock all**
 ```
@@ -57,4 +57,26 @@ reflector --country China --age 24 --sort rate --protocol https --save /etc/pacm
 ```
 pacman -Syy
 ```
+# Section Three - Update System time
+1. Update the time
+```
+timedatectl set-ntp true
+```
+2. Check the status of time service
+```
+timedatectl status
+```
 
+# Section Four - Partition The Disk
+1. Check the name of disk
+   - Usually, the disk name will be /dev/sda, /dev/nvme0n1 or /dev/mmcblk0
+```
+fdisk -l
+```
+2. Use fdisk tool box
+```
+fdisl <disk path>
+```
+3. Type **m** for help, **d** to delete a partition, **n** to add a partition, etc. The help menu is specific enough.
+
+# Section Fiv - 
