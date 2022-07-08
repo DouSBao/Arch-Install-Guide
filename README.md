@@ -1,13 +1,21 @@
 # Arch-Install-Guide
-A personal use, unprofessional guide of installing and config Arch Linux
-Ignore the preparation of iso in usb. The guide will start at successfully step into the tiny Arch in the usb.
+This is a personal use and unprofessional guide of installing Arch Linux, and config it with i3-gaps and so on.
+The guide will assume you have already prepared the usb to install the Arch, and have already get into the "tiny" arch window
 
 # Step One - Connect To Wifi
-1. Try ping <website>, if no error occur, jump to next step section
-2. Use command **'iwctl'** to step into iwd tool box.
-3. Use command **'device list'** to show the wireless network card you have
-4. Use command **'device <network card> show'** to display the status of the card.
-  a. If the **'powered' is shown as 'off'**, then use command **'device <network card> set-property Powered on'** or command **'adapter <adapter> set-property Powered on'** to turn the power on.
+1. Try the following to check is the wifi connect
 ```
-  Test
+ping <website>
+```
+2. Use the following to get into iwd shell
+```
+iwctl
+```
+3. Use the following to show your wireless network card
+```
+device list
+```
+4. Use the following to show the status of your network card
+```
+device <network card> show
 ```
