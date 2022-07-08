@@ -19,9 +19,32 @@ device list
 ```
 4. Use the following first command to show the status of your network card.
    - If the status of "Powered" is off, then use second and the third command on turn it on.
-   - If still not working, try ** rfkill unblock all **
+   - If still not working, try **rfkill unblock all**
 ```
 device <network card> show
 device wlan0 set-property Powered on
 adapter phy0 set-property Powered on
 ```
+5. Connect to wifi
+```
+station <network card> connect <SSID>
+```
+6. Check if success
+```
+station <network card> show
+```
+7. Exit iwctl
+```
+exit
+```
+
+# Section Two - Update mirrorlist source
+1. Use reflector to update the package mirrorlist at /etc/pacman.d/mirrorlist
+```
+reflector --country China --age 24 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
+```
+2. Synchronize package manager pacman
+```
+pacman -Syy
+```
+
