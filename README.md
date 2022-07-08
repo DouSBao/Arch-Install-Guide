@@ -37,6 +37,7 @@ station <network card> show
 ```
 exit
 ```
+ps: If iwctl not works, you could connect to cable, or connect your phone to the machine in order to use wifi. Then download NetworkManager, use nmcli or nmtui to connect to wifi.
 
 # Section Two - Update mirrorlist source
 1. Use reflector to update the package mirrorlist at /etc/pacman.d/mirrorlist
