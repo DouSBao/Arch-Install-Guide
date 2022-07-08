@@ -13,7 +13,7 @@ ping <website>
 ```
 systemctl status dhcpcd.service
 ```
-3. If is not enable, enable it, and run it
+3. If is not enable, enable it, and start the service
 ```
 systemctl enable dhcpcd.service
 systemctl start dhcpcd.service
