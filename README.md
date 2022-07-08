@@ -19,6 +19,7 @@ device list
 ```
 4. Use the following first command to show the status of your network card.
    - If the status of "Powered" is off, then use second and the third command on turn it on.
+   - If still not working, try ** rfkill unblock all **
 ```
 device <network card> show
 device wlan0 set-property Powered on
