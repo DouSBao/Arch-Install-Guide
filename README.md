@@ -86,11 +86,18 @@ fdisl <disk path>
 mkfs.vfat <partition path>
 ```
 2. For swap partition
-   - To make the file system
+- To make the file system
 ```
 mkswap <partition path>
 ```
-   - To enable the swap partition
-   ```
-   swapon <partition path>
-   ```
+- To enable the swap partition
+```
+swapon <partition path>
+```
+3. For linux file system
+```
+mkfs.ext4 <partition path>
+```
+
+# Section Six - Mount Partition
+
