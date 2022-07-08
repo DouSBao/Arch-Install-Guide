@@ -1,24 +1,24 @@
 # Arch-Install-Guide
-- This is a personal use and unprofessional guide of installing Arch Linux, and config it with i3-gaps and so on.
+- This is a personal use and unprofessional guide of installing Arch Linux.
+- This guide will use i3-gaps as window manager, and don't use any display manager. Which means, use tty as login shell, and manually type startx to start xorg server everytime.
 - The guide will assume you have already prepared the usb to install the Arch, and have already get into the "tiny" arch window.
-- Some command will need to be manually fixed, and replace the temp part by a suitable name.
-- The name in <> shoul dbe 
+- Any <> appears in the command should be manually fixed and replaced by a suitable name.
 
 # Section One - Connect To Wifi
-1. Try the following to check is the wifi connect
+1. Check whether the wifi is connect. If it is connect, ignore this section.
 ```
 ping <website>
 ```
-2. Use the following to get into iwd shell
+2. Use iwctl tool box.
 ```
 iwctl
 ```
-3. Use the following to show your wireless network card
+3. Show your wireless network card name.
 ```
 device list
 ```
 4. Use the following first command to show the status of your network card.
-  - If the status of "Powered" is off, then use second and the third command on turn it on.
+  * If the status of "Powered" is off, then use second and the third command on turn it on.
 ```
 device <network card> show
 device wlan0 set-property Powered on
