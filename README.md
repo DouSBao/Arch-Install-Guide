@@ -98,6 +98,17 @@ swapon <partition path>
 ```
 mkfs.ext4 <partition path>
 ```
+ps: You could use lsblk **-f command** to show the type of partition in order to check 
 
 # Section Six - Mount Partition
+1. For linux file partition, mount at home
+```
+mount <linux file partition path> /mnt
+```
+2. For EFI partition
+```
+mkdir -p /mnt/boot/efi
+mount <EFI partition path> /mnt/boot/efi
 
+# Section Seven
+```
