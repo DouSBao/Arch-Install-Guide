@@ -77,6 +77,20 @@ fdisk -l
 ```
 fdisl <disk path>
 ```
-3. Type **m** for help, **d** to delete a partition, **n** to add a partition, etc. The help menu is specific enough.
+3. Type **m** for help, **d** to delete a partition, **n** to add a partition, **t** to change the partition type, etc. The help menu is specific enough.
+4. Use **w** to exit, in order to save the change
 
-# Section Fiv - 
+# Section Fiv - Make File System
+1. For efi partition, use
+```
+mkfs.vfat <partition path>
+```
+2. For swap partition
+   - To make the file system
+```
+mkswap <partition path>
+```
+   - To enable the swap partition
+   ```
+   swapon <partition path>
+   ```
