@@ -9,15 +9,24 @@
 ```
 ping <website>
 ```
-2. Use iwctl tool box.
+2. Check is dhcpcd.service service running
+```
+systemctl status dhcpcd.service
+```
+3. If is not enable, enable it, and run it
+```
+systemctl enable dhcpcd.service
+systemctl start dhcpcd.service
+```
+4. Use iwctl tool box.
 ```
 iwctl
 ```
-3. Show your wireless network card name.
+5. Show your wireless network card name.
 ```
 device list
 ```
-4. Use the following first command to show the status of your network card.
+6. Use the following first command to show the status of your network card.
    - If the status of "Powered" is off, then use second and the third command on turn it on.
    - If still not working, try **rfkill unblock all**
 ```
@@ -25,19 +34,19 @@ device <network card> show
 device wlan0 set-property Powered on
 adapter phy0 set-property Powered on
 ```
-5. Connect to wifi
+7. Connect to wifi
 ```
 station <network card> connect <SSID>
 ```
-6. Check if success
+8. Check if success
 ```
 station <network card> show
 ```
-7. Exit iwctl
+9. Exit iwctl
 ```
 exit
 ```
-ps: If iwctl not works, you could connect to cable, or connect your phone to the machine in order to use wifi. Then download NetworkManager, use nmcli or nmtui to connect to wifi.
+ps: If iwctl not works anyway, you could connect to cable, or connect your phone to the machine in order to use wifi. Then download NetworkManager, use nmcli or nmtui to connect to wifi.
 
 # Section Two - Update mirrorlist source
 1. Use reflector to update the package mirrorlist at /etc/pacman.d/mirrorlist
