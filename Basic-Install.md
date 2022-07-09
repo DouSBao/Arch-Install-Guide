@@ -189,7 +189,7 @@ grub-install <path to the disk>
 3. Change the window resolution in file /etc/default/grub
 4. Make grub config
 ```
-grub-mkconfig /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 5. Enable networkmanager daemon
 ```
