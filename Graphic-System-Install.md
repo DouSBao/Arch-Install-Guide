@@ -65,7 +65,14 @@ $HOME/.local/share/fonts
 | | | Italic.otf
 | | | Bold-Italic.otf
 ```
-
+6. Run the command in order to reload fonts into cache. (So they could be used)
+```
+fc-cache -vf
+```
+7. Show the exact name of fonts, so you could use it in alacritty.yaml file
+```
+fclist | grep <rough name of font>
+```
 
 # Section Four - VPN (Optional)
 1. If you locate in China, or some other country where you can't access google, then you should read this section, and set up your VPN.
