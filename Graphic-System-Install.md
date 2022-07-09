@@ -34,7 +34,7 @@ sudo pacman -S i3-gaps
 ```
 exec i3
 ```
-3. Config i3
+3. For config i3, refer to [i3 User Guide](https://i3wm.org/docs/userguide.html).
 
 
 # Section Three - Terminal Emulator
