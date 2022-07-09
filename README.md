@@ -6,3 +6,6 @@
 
 # Basic Install Of Arch
 - Link: [Basic Install](Basic-Install.md)
+
+# Graphic System Install of Arch
+- Link: [Graphic System Install](Graphic-System-Install.md)
