@@ -22,6 +22,8 @@ sudo pacman -S i3-gaps
 ```
 exec i3
 ```
+3. Config i3
+
 
 # Section Three - Terminal Emulator
 1. Install alacritty
@@ -36,3 +38,27 @@ bindsym $mod+Return exec alacritty
 3. To config alacritty, create file $HOME/.config/alacritty/alacritty.yml.
 - For avaliable color scheme, refer to [color scheme](https://github.com/alacritty/alacritty/wiki/Color-schemes)
 - For avaliable options of alacritty, refer to [alacritty config options](https://github.com/alacritty/alacritty/blob/master/alacritty.yml)
+
+# Section Four - AUR Helper (Optional)
+1. Commands
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+- It's complete possiable to install package without AUR helper from AUR. Just simply clone from AUR link, and use **makepkg -si**.
+- If **makepkg** is missing, you should install base-devel package through pacman.
+
+# Section Fiv - Browser
+1. If you have AUR helper
+```
+yay -S google-chrome
+```
+2. If you don't have AUR helper
+```
+git clone https://aur.archlinux.org/google-chrome.git
+cd google-chrome
+makepkg -si
+```
+
+# Section Six - 
