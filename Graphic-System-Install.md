@@ -43,6 +43,15 @@ bindsym $mod+Return exec alacritty
 1. If you are locate in China, or some other country where you can't access google, then you should read this section, and set up your VPN.
 2. The guide will use Clash For Linux as cient. Therefore, you should subscribe only the node which support clash protocol.
 3. If you can't find a place to pay for nodes, here is a link perhaps will help: [Link](https://www.yxrcr.com/#/login)
+4. Download the Clash For Linux clien, unzip it, and make it executable
+```
+wget https://github.com/Dreamacro/clash/releases/download/v1.10.0/clash-linux-amd64-v1.10.0.gz
+gunzip clash-linux-amd64-v1.10.0.gz
+mv clash-linux-amd64-v1.10.0 clash
+chmod u+x clash
+```
+5. Execute clash, it will try to download Country.mmdb file for you. If the speed is slow, manually download it from [here](https://github.com/Dreamacro/maxmind-geoip/releases). If you manually download it, remember to copy the file to $HOME/.config/clash
+6. Use this tool to convert the subscribe link
 
 # Section Five - AUR Helper (Optional)
 1. Commands
