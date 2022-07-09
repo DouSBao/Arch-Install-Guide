@@ -34,6 +34,5 @@ sudo pacman -S alacritty
 bindsym $mod+Return exec alacritty
 ```
 3. To config alacritty, create file $HOME/.config/alacritty/alacritty.yml.
-ps: 
 - For avaliable color scheme, refer to [color scheme](https://github.com/alacritty/alacritty/wiki/Color-schemes)
 - For avaliable options of alacritty, refer to [alacritty config options](https://github.com/alacritty/alacritty/blob/master/alacritty.yml)
