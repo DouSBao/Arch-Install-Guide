@@ -39,7 +39,7 @@ bindsym $mod+Return exec alacritty
 - For avaliable color scheme, refer to [color scheme](https://github.com/alacritty/alacritty/wiki/Color-schemes)
 - For avaliable options of alacritty, refer to [alacritty config options](https://github.com/alacritty/alacritty/blob/master/alacritty.yml)
 4. Most terminal application will use nerd font icon. Therefore, you should find one that you like from [patched font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts), and install Regular, Italic, Bold, and Bold-Italic. Either ttf or otf is acceptable.
-5. If you want to apply the font downloaded only for the current user, move the font file to **$HOME/.local/share/fonts/<ttf or otf>/<name of font>/<font files>**
+5. If you want to apply the font downloaded only for the current user, move the font file to $HOME/.local/share/fonts/<ttf or otf>/<name of font>/<font files>
 
 
 # Section Four - VPN (Optional)
