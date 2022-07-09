@@ -39,7 +39,12 @@ bindsym $mod+Return exec alacritty
 - For avaliable color scheme, refer to [color scheme](https://github.com/alacritty/alacritty/wiki/Color-schemes)
 - For avaliable options of alacritty, refer to [alacritty config options](https://github.com/alacritty/alacritty/blob/master/alacritty.yml)
 
-# Section Four - AUR Helper (Optional)
+# Section Four - VPN (Optional)
+1. If you are locate in China, or some other country where you can't access google, then you should read this section, and set up your VPN.
+2. The guide will use Clash For Linux as cient. Therefore, you should subscribe only the node which support clash protocol.
+3. If you can't find a place to pay for nodes, here is a link perhaps will help: [Link](https://www.yxrcr.com/#/login)
+
+# Section Five - AUR Helper (Optional)
 1. Commands
 ```
 git clone https://aur.archlinux.org/yay.git
@@ -49,7 +54,7 @@ makepkg -si
 - It's complete possiable to install package without AUR helper from AUR. Just simply clone from AUR link, and use **makepkg -si**.
 - If **makepkg** is missing, you should install base-devel package through pacman.
 
-# Section Fiv - Browser
+# Section Six - Browser
 1. If you have AUR helper
 ```
 yay -S google-chrome
