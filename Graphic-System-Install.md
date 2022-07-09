@@ -12,6 +12,18 @@ nvim ~/.xinitrc
 ```
 sudo pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
 ```
+4. Install gpu driver (amd)
+```
+sudo pacman -S xf86-video-amdgpu xf86-video-ati mesa vulkan-radeon
+```
+5. Install gpu driver (intel)
+```
+sudo pacman -S xf86-video-intel vulkan-intel mesa
+```
+6. Install gpu dirver (nvidia)
+```
+sudo pacman -S nvidia nvidia-settings nvidia-utils
+```
 
 # Section Two - Window Manager
 1. Install i3-gaps (fork from i3, and has more features)
