@@ -87,8 +87,9 @@ fc-cache -vf
 fclist | grep <rough name of font>
 ```
 
-# Section Seven - Some Other Useful And Tiny Graphic Tools
+# Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
 2. Feh (Set wallpaper)
 3. Neofetch (Display system info)
 - Enable these tools by adding them in ~/.xinitrc file. So they will be lauched when startx.
+- These tiny tools might not 100% associated with "graphic", but they surely will make you system better :)
