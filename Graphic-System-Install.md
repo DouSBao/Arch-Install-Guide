@@ -1,4 +1,4 @@
-# Section One - Basic: Xorg
+# Section One - Xorg
 1. Install basic xorg server and headers
 ```
 sudo pacman -S xorg-server xorg-xinit libx11 libxinerama
@@ -76,6 +76,7 @@ $HOME/.local/share/fonts
 | | | Bold.otf
 | | | Italic.otf
 | | | Bold-Italic.otf
+= = =
 ```
 6. Run the command in order to reload fonts into cache. (So they could be used)
 ```
@@ -158,4 +159,8 @@ makepkg -si
 ```
 3. (Optional) Install key binding extension for chrome. [Link](https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en)
 
-# Section Seven - 
+# Section Seven - Some Other Useful But Tiny Tools
+1. Compton (Window animation and transparency)
+2. Feh (Set wallpaper)
+3. Neofetch (Display system info)
+- Enable these tools by adding them in ~/.xinitrc file. So they will be lauched when startx.
