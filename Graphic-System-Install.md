@@ -120,7 +120,6 @@ defaults.ctl.card <valid card number>
 defaults.pcm.device <device number associated with the valid card number shown in step 2>
 ```
 7. Reboot. The sound system should work now. Here is a website for quick [test](https://www.onlinemictest.com/)
-- In order to find which sound card is functioning, at the alsamixer window, and use F6 to select card. The one shows sound bars is valid.
 
 # Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
