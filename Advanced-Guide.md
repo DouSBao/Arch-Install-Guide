@@ -1,4 +1,7 @@
-# Section One - VPN (Optional)
+# Introduction
+- This guide is optional and completely personal prefer. I suggest you don't follow the sequence to read, but read the part which you interested first.
+
+# Section One - VPN
 1. If you locate in China, or some other country where you can't access google, then you should read this section, and set up your VPN.
 2. The guide will use Clash For Linux as cient. Therefore, you should subscribe only the node which support clash protocol.
 3. If you can't find a place to pay for nodes, here is a link perhaps will help: [Link](https://www.yxrcr.com/#/login)
@@ -47,7 +50,7 @@ sudo systemctl start clash
 sudo systemctl status clash
 ```
 
-# Section Two - AUR Helper (Optional)
+# Section Two - AUR Helper
 1. Commands
 ```
 git clone https://aur.archlinux.org/yay.git
