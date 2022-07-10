@@ -35,7 +35,7 @@ sudo pacman -S i3-gaps
 exec i3
 ```
 3. For config i3, refer to [i3 User Guide](https://i3wm.org/docs/userguide.html).
-
+- Spend time on this! This section is important. You can use go through i3 default config file while read through the user guide, and edit the config, make it benefit and convenient you.
 
 # Section Three - Terminal Emulator
 1. Install alacritty
@@ -136,30 +136,9 @@ sudo systemctl start clash
 sudo systemctl status clash
 ```
 
-# Section Five - AUR Helper (Optional)
-1. Commands
-```
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-```
-- It's complete possiable to install package without AUR helper from AUR. Just simply clone from AUR link, and use **makepkg -si**.
-- If **makepkg** is missing, you should install base-devel package through pacman.
 
-# Section Six - Browser
-1. If you have AUR helper
-```
-yay -S google-chrome
-```
-2. If you don't have AUR helper
-```
-git clone https://aur.archlinux.org/google-chrome.git
-cd google-chrome
-makepkg -si
-```
-3. (Optional) Install key binding extension for chrome. [Link](https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en)
 
-# Section Seven - Some Other Useful But Tiny Tools
+# Section Seven - Some Other Useful And Tiny Graphic Tools
 1. Compton (Window animation and transparency)
 2. Feh (Set wallpaper)
 3. Neofetch (Display system info)
