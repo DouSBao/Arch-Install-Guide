@@ -108,11 +108,19 @@ aplay -l
 ```
 amixer scontrols
 ```
-4. If the above command doesn't show 'Master', then something is going wrong. If you have muti sound cards, use option '-c <number>' to show is another sound card is functioning.
+4. If the above command doesn't show 'Master', then something is going wrong. If you have muti sound cards, use option '-c <number>' to show whether another sound card is functioning.
 ```
 amixer -c <sound card number> scontrols
 ```
-
+5. Use command **alsamixer** step into the control window, follow the introduction shown on the top of window, select the correct sound card, and unmute all channels of it. Do the same thing to microphone.
+6. Exit the control window. If you need to change the default sound card (which means when you do the step 3, Master is not detected), write the following to the file /etc/asound.conf
+```
+defaults.pcm.card <valid card number>
+defaults.ctl.card <valid card number>
+defaults.pcm.device <device number associated with the valid card number shown in step 2>
+```
+7. Reboot. The sound system should work now. Here is a website for quick [test](https://www.onlinemictest.com/)
+- In order to find which sound card is functioning, at the alsamixer window, and use F6 to select card. The one shows sound bars is valid.
 
 # Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
