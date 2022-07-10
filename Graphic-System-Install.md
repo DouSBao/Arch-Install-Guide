@@ -156,5 +156,6 @@ git clone https://aur.archlinux.org/google-chrome.git
 cd google-chrome
 makepkg -si
 ```
+3. (Optional) Install key binding extension for chrome. [Link](https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en)
 
-# Section Six - 
+# Section Seven - 
