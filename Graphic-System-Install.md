@@ -86,6 +86,14 @@ fc-cache -vf
 ```
 fclist | grep <rough name of font>
 ```
+8. After you installed xorg, window manager and terminal Emulator, you should be able to run command **startx** and step into your graphic window. Here is some simple keybindings you could do inside i3
+```
+$mod+Enter -> (Open terminal)
+$mod+Shift+q -> (Close window)
+$mod+Shift+e -> (Exit i3, back to default window)
+```
+- For mod key, by default, it should be either Home or Alt. Depends on which you choice when you start i3 without a config file.
+- For more infomation, you should read i3 user guide.
 
 # Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
