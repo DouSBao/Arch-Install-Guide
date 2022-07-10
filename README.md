@@ -9,3 +9,6 @@
 
 # Graphic System Install of Arch
 - Link: [Graphic System Install](Graphic-System-Install.md)
+
+# Advanced Guide
+- Link: [Advanced Guide](Advanced-Guide.md)
