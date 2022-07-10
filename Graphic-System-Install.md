@@ -95,6 +95,25 @@ $mod+Shift+e -> (Exit i3, back to default window)
 - For mod key, by default, it should be either Home or Alt. Depends on which you choice when you start i3 without a config file.
 - For more infomation, you should read i3 user guide.
 
+# Section Four - ALSA
+1. Install alsa-utils package, which provides a easy-use interface to interact with alsa.
+```
+sudo pacman -S alsa-utils
+```
+2. List all sound cards
+```
+aplay -l
+```
+3. List current (default) sound card.
+```
+amixer scontrols
+```
+4. If the above command doesn't show 'Master', then something is going wrong. If you have muti sound cards, use option '-c <number>' to show is another sound card is functioning.
+```
+amixer -c <sound card number> scontrols
+```
+
+
 # Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
 2. Feh (Set wallpaper)
