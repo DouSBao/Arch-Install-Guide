@@ -72,3 +72,6 @@ cd google-chrome
 makepkg -si
 ```
 3. (Optional) Install key binding extension for chrome. [Link](https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en)
+
+# Section Four - Polybar
+
