@@ -121,6 +121,21 @@ defaults.pcm.device <device number associated with the valid card number shown i
 ```
 7. Reboot. The sound system should work now. Here is a website for quick [test](https://www.onlinemictest.com/)
 
+# Section Five - Input Method
+1. Install fcitx5 and associated packages
+```
+sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool
+```
+2. Export the following variables at anywhere you like
+```
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+3. Reboot
+4. Add pinyin to input method via fcitx5-configtool
+5. Here is a nice gruvbox skin for fcitx5 [here](https://github.com/ayamir/fcitx5-gruvbox)
+  
 # Section Four - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
 2. Feh (Set wallpaper)
