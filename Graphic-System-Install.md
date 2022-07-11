@@ -136,8 +136,8 @@ export XMODIFIERS=@im=fcitx
 4. Add pinyin to input method via fcitx5-configtool
 5. Here is a nice gruvbox skin for fcitx5 [here](https://github.com/ayamir/fcitx5-gruvbox)
   
-# Section Six - Some Other Useful And Tiny Tools
-1. Compton (Window animation and transparency)
+# Section Six - Some Other Useful Tools
+1. Compton (Window animation and transparency. You don't need to config this unless you want specific apperance for some kind of windows)
 2. Feh (Set wallpaper)
 3. Neofetch (Display system info)
 - Enable these tools by adding them in ~/.xinitrc file. So they will be lauched when startx.
