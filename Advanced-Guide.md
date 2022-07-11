@@ -101,4 +101,16 @@ exec-always --no-startup-id $HOME/.config/polybar/launch.sh
 5. Config polybar through [user guide](https://github.com/polybar/polybar/wiki)
 - ps: Polybar is not hard to config. You should spent some time on the user guide and make your own! It worses :)
 
-# Section Fix - TODO
+# Section Fix - Laptop Volumen & Backlight Key
+1. To enable volume key, you could bind the command with the key **XF86AudioRaiseVolume**, **XF86AudioLowerVolume** and **XF86AudioMute**. The command is depend on which mixer you use. Here is the commands for alsa
+```
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+```
+2. To enable the backlight key, you could bind the command with the key **XF86MonBrightnessUp** and **XF86MonBrightnessDown**. To control the backlight, here is a simply tool to download [tool guide](https://github.com/wavexx/acpilight/blob/master/README.rst)
+```
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+```
+- If you are intel user, you could use xbacklight which is in the package xorg-xbacklight. But if you are not, a good replacement for that is acpilight. The command for both of the two is above.
