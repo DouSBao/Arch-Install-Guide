@@ -136,7 +136,7 @@ export XMODIFIERS=@im=fcitx
 4. Add pinyin to input method via fcitx5-configtool
 5. Here is a nice gruvbox skin for fcitx5 [here](https://github.com/ayamir/fcitx5-gruvbox)
   
-# Section Four - Some Other Useful And Tiny Tools
+# Section Six - Some Other Useful And Tiny Tools
 1. Compton (Window animation and transparency)
 2. Feh (Set wallpaper)
 3. Neofetch (Display system info)
