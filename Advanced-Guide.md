@@ -74,4 +74,31 @@ makepkg -si
 3. (Optional) Install key binding extension for chrome. [Link](https://chrome.google.com/webstore/detail/shortkeys-custom-keyboard/logpjaacgmcbpdkdchjiaagddngobkck?hl=en)
 
 # Section Four - Polybar
+1. Install polybar though pacman
+```
+sudo pacman -S pacman
+```
+2. Create launch script at $HOME/.config/polybar/launch.sh
+```
+#!/bin/zsh
 
+killall -q polybar
+
+while pgre -u $UID -x polybar > /dev/null; do
+        sleep 1
+done
+
+polybar <polybar bar section name> 2>&1 | tee -a /tmp/polybar.log & disown
+```
+3. Make script executable
+```
+chmod +x launch.sh
+```
+4. Always launch polybar when i3 restart. Add the following to i3 config
+```
+exec-always --no-startup-id $HOME/.config/polybar/launch.sh
+```
+5. Config polybar through [user guide](https://github.com/polybar/polybar/wiki)
+- ps: Polybar is not hard to config. You should spent some time on the user guide and make your own! It worses :)
+
+# Section Fix - TODO
